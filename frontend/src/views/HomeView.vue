@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Adsb from '../components/Adsb.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Adsb />
   </main>
 </template>
