@@ -9,9 +9,10 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application files
-COPY . .
+VOLUME /data/opensky
 
-# Default command
-CMD ["python"]
+# Copy requirements file
+COPY backend/ backend/ 
 
+ENTRYPOINT ["python", "backend/get_adsb_data.py"]
+#CMD ["sleep", "infinity"]
